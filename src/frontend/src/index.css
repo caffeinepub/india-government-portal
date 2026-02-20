@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Orange and Teal Color Scheme for India Government Portal */
+        --background: 0.99 0.005 40;
+        --foreground: 0.20 0.015 40;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.20 0.015 40;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.20 0.015 40;
+        
+        /* Primary: Vibrant Orange */
+        --primary: 0.62 0.19 35;
+        --primary-foreground: 0.99 0.005 40;
+        
+        /* Secondary: Deep Teal */
+        --secondary: 0.55 0.12 195;
+        --secondary-foreground: 0.99 0.005 40;
+        
+        --muted: 0.96 0.01 40;
+        --muted-foreground: 0.50 0.02 40;
+        
+        --accent: 0.96 0.01 40;
+        --accent-foreground: 0.20 0.015 40;
+        
+        --destructive: 0.58 0.22 25;
+        --destructive-foreground: 0.99 0.005 40;
+        
+        --border: 0.90 0.01 40;
+        --input: 0.90 0.01 40;
+        --ring: 0.62 0.19 35;
+        
+        --chart-1: 0.62 0.19 35;
+        --chart-2: 0.55 0.12 195;
+        --chart-3: 0.70 0.15 120;
+        --chart-4: 0.65 0.18 280;
+        --chart-5: 0.60 0.16 60;
+    }
+
+    .dark {
+        --background: 0.15 0.015 40;
+        --foreground: 0.95 0.005 40;
+        
+        --card: 0.20 0.015 40;
+        --card-foreground: 0.95 0.005 40;
+        
+        --popover: 0.18 0.015 40;
+        --popover-foreground: 0.95 0.005 40;
+        
+        /* Primary: Vibrant Orange (slightly adjusted for dark mode) */
+        --primary: 0.68 0.20 35;
+        --primary-foreground: 0.15 0.015 40;
+        
+        /* Secondary: Deep Teal (slightly adjusted for dark mode) */
+        --secondary: 0.60 0.14 195;
+        --secondary-foreground: 0.95 0.005 40;
+        
+        --muted: 0.25 0.015 40;
+        --muted-foreground: 0.65 0.01 40;
+        
+        --accent: 0.30 0.02 40;
+        --accent-foreground: 0.95 0.005 40;
+        
+        --destructive: 0.62 0.24 25;
+        --destructive-foreground: 0.95 0.005 40;
+        
+        --border: 0.30 0.02 40;
+        --input: 0.30 0.02 40;
+        --ring: 0.68 0.20 35;
+        
+        --chart-1: 0.68 0.20 35;
+        --chart-2: 0.60 0.14 195;
+        --chart-3: 0.72 0.16 120;
+        --chart-4: 0.67 0.19 280;
+        --chart-5: 0.64 0.17 60;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+        font-weight: 600;
+    }
+}

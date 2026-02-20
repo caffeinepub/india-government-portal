@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "India Government jobs, result, admit card, news and schemes portal",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Indian government emblem or Ashoka Chakra inspired icon for the portal logo (logo.dim_120x120.png)\n- Modern hero background image featuring abstract geometric patterns in orange and teal gradient (hero-bg.dim_1920x600.png)\n- Icon representing government jobs with briefcase or office building motif (jobs-icon.dim_96x96.png)\n- Icon representing exam results with document or certificate motif (results-icon.dim_96x96.png)\n- Icon representing admit cards with ID card or ticket motif (admit-card-icon.dim_96x96.png)\n- Icon representing news with newspaper or megaphone motif (news-icon.dim_96x96.png)\n- Icon representing government schemes with handshake or benefits motif (schemes-icon.dim_96x96.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-modern-homepage-with-a-hero-section-showcasing-the-portal-s-purpose-navigation-to-all-main-sections-jobs-results-admit-cards-news-schemes-and-featured-latest-updates-from-each-category",
+      "title": "Build a modern homepage with a hero section showcasing the portal's purpose, navigation to all main sections (Jobs, Results, Admit Cards, News, Schemes), and featured/latest updates from each category",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-jobs-section-page-that-displays-all-government-job-listings-in-a-card-based-layout-with-filtering-options-by-qualification-location-organization-and-application-deadline-status-active-closed",
+      "title": "Create a Jobs section page that displays all government job listings in a card-based layout with filtering options by qualification, location, organization, and application deadline status (active/closed)",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-results-section-page-that-displays-exam-results-in-a-searchable-list-with-filtering-by-organization-and-date-allowing-users-to-quickly-find-their-exam-results",
+      "title": "Create a Results section page that displays exam results in a searchable list with filtering by organization and date, allowing users to quickly find their exam results",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-admit-cards-section-page-that-displays-admit-card-information-with-filters-by-exam-date-and-organization-highlighting-upcoming-exams-prominently",
+      "title": "Create an Admit Cards section page that displays admit card information with filters by exam date and organization, highlighting upcoming exams prominently",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-news-section-page-that-displays-government-news-updates-in-a-blog-style-layout-with-category-filters-and-search-functionality",
+      "title": "Create a News section page that displays government news updates in a blog-style layout with category filters and search functionality",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-schemes-section-page-that-displays-government-schemes-in-a-detailed-card-format-with-filtering-by-ministry-and-eligibility-making-it-easy-to-discover-applicable-schemes",
+      "title": "Create a Schemes section page that displays government schemes in a detailed card format with filtering by ministry and eligibility, making it easy to discover applicable schemes",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-the-portal-with-a-professional-trustworthy-aesthetic-using-a-vibrant-orange-and-deep-teal-color-scheme-inspired-by-official-indian-government-portals-with-clean-typography-using-a-modern-sans-serif-font-stack-generous-whitespace-subtle-shadows-for-depth-and-accessibility-compliant-contrast-ratios-throughout",
+      "title": "Design the portal with a professional, trustworthy aesthetic using a vibrant orange and deep teal color scheme inspired by official Indian government portals, with clean typography using a modern sans-serif font stack, generous whitespace, subtle shadows for depth, and accessibility-compliant contrast ratios throughout",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Display government job listings",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Show exam results",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Display admit card information",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Show government news updates",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Display government schemes information",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create a backend data model to store government job listings with fields including job title, organization name, post name, vacancy count, qualification requirements, application start date, application end date, exam date, official website link, and location",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create a backend data model to store exam results with fields including exam name, organization, result declaration date, result link, and roll number range or category information",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Create a backend data model to store admit card information with fields including exam name, organization, admit card release date, exam date, download link, and important instructions",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Create a backend data model to store government news updates with fields including headline, summary, publication date, source, category, and external link",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Create a backend data model to store government schemes with fields including scheme name, ministry/department, description, eligibility criteria, benefits, application process, official website, and launch date",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Implement backend query functions to retrieve the latest items from each category (jobs, results, admit cards, news, schemes) for display on the homepage",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "India Government Portal",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,155 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-modern-homepage-with-a-hero-section-showcasing-the-portal-s-purpose-navigation-to-all-main-sections-jobs-results-admit-cards-news-schemes-and-featured-latest-updates-from-each-category",
+      "featureTitle": "Build a modern homepage with a hero section showcasing the portal's purpose, navigation to all main sections (Jobs, Results, Admit Cards, News, Schemes), and featured/latest updates from each category",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/home/FeaturedUpdates.tsx",
+        "frontend/src/components/home/HeroSection.tsx",
+        "frontend/src/components/layout/Header.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-jobs-section-page-that-displays-all-government-job-listings-in-a-card-based-layout-with-filtering-options-by-qualification-location-organization-and-application-deadline-status-active-closed",
+      "featureTitle": "Create a Jobs section page that displays all government job listings in a card-based layout with filtering options by qualification, location, organization, and application deadline status (active/closed)",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/jobs/JobCard.tsx",
+        "frontend/src/components/jobs/JobDetailsModal.tsx",
+        "frontend/src/components/jobs/JobFilters.tsx",
+        "frontend/src/pages/JobsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-results-section-page-that-displays-exam-results-in-a-searchable-list-with-filtering-by-organization-and-date-allowing-users-to-quickly-find-their-exam-results",
+      "featureTitle": "Create a Results section page that displays exam results in a searchable list with filtering by organization and date, allowing users to quickly find their exam results",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/results/ResultCard.tsx",
+        "frontend/src/components/results/ResultFilters.tsx",
+        "frontend/src/pages/ResultsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-admit-cards-section-page-that-displays-admit-card-information-with-filters-by-exam-date-and-organization-highlighting-upcoming-exams-prominently",
+      "featureTitle": "Create an Admit Cards section page that displays admit card information with filters by exam date and organization, highlighting upcoming exams prominently",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/admitcards/AdmitCardCard.tsx",
+        "frontend/src/components/admitcards/AdmitCardFilters.tsx",
+        "frontend/src/pages/AdmitCardsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-news-section-page-that-displays-government-news-updates-in-a-blog-style-layout-with-category-filters-and-search-functionality",
+      "featureTitle": "Create a News section page that displays government news updates in a blog-style layout with category filters and search functionality",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/news/NewsCard.tsx",
+        "frontend/src/components/news/NewsFilters.tsx",
+        "frontend/src/pages/NewsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-schemes-section-page-that-displays-government-schemes-in-a-detailed-card-format-with-filtering-by-ministry-and-eligibility-making-it-easy-to-discover-applicable-schemes",
+      "featureTitle": "Create a Schemes section page that displays government schemes in a detailed card format with filtering by ministry and eligibility, making it easy to discover applicable schemes",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/schemes/SchemeCard.tsx",
+        "frontend/src/components/schemes/SchemeDetailsModal.tsx",
+        "frontend/src/components/schemes/SchemeFilters.tsx",
+        "frontend/src/pages/SchemesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-the-portal-with-a-professional-trustworthy-aesthetic-using-a-vibrant-orange-and-deep-teal-color-scheme-inspired-by-official-indian-government-portals-with-clean-typography-using-a-modern-sans-serif-font-stack-generous-whitespace-subtle-shadows-for-depth-and-accessibility-compliant-contrast-ratios-throughout",
+      "featureTitle": "Design the portal with a professional, trustworthy aesthetic using a vibrant orange and deep teal color scheme inspired by official Indian government portals, with clean typography using a modern sans-serif font stack, generous whitespace, subtle shadows for depth, and accessibility-compliant contrast ratios throughout",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

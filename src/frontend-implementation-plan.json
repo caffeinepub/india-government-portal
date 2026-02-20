@@ -1,0 +1,248 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "India Government Portal Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Build modern homepage with hero section, navigation, and featured updates from all categories",
+      "acceptanceCriteria": [
+        "Homepage displays a compelling hero section",
+        "Navigation allows access to all five main sections",
+        "Latest updates from each category are visible on homepage",
+        "Design is responsive and works on mobile devices"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create homepage component with hero section using generated image frontend/public/assets/generated/hero-bg.dim_1920x600.png, navigation cards to Jobs/Results/Admit Cards/News/Schemes sections, and featured updates grid displaying latest items from each category using backend query functions getLatestJobListings, getLatestExamResults, getLatestAdmitCards, getLatestNewsUpdates, and getLatestGovernmentSchemes"
+        },
+        {
+          "path": "frontend/src/components/layout/Header.tsx",
+          "operation": "create",
+          "description": "Create header component with portal logo using generated image frontend/public/assets/generated/logo.dim_120x120.png, site title, and navigation links to Jobs, Results, Admit Cards, News, and Schemes pages with responsive mobile menu"
+        },
+        {
+          "path": "frontend/src/components/home/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create hero section component with background using generated image frontend/public/assets/generated/hero-bg.dim_1920x600.png, portal title, tagline explaining purpose, and call-to-action buttons linking to main sections"
+        },
+        {
+          "path": "frontend/src/components/home/FeaturedUpdates.tsx",
+          "operation": "create",
+          "description": "Create featured updates component displaying latest items from all five categories (jobs, results, admit cards, news, schemes) in a grid layout with category icons using generated images frontend/public/assets/generated/jobs-icon.dim_96x96.png, frontend/public/assets/generated/results-icon.dim_96x96.png, frontend/public/assets/generated/admit-card-icon.dim_96x96.png, frontend/public/assets/generated/news-icon.dim_96x96.png, and frontend/public/assets/generated/schemes-icon.dim_96x96.png"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for HomePage component at root path '/' and ensure header component is rendered on all pages"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create Jobs section page with card-based layout and filtering by qualification, location, organization, and deadline status",
+      "acceptanceCriteria": [
+        "Job listings display in an organized card layout",
+        "Users can filter jobs by multiple criteria",
+        "Each job card shows key information including deadline and vacancy count",
+        "Clicking a job card shows detailed information",
+        "Active jobs are visually distinguished from closed ones"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/JobsPage.tsx",
+          "operation": "create",
+          "description": "Create jobs page component that fetches job listings using getLatestJobListings backend function, displays jobs in card grid layout, implements filtering controls for qualification, location, organization, and application deadline status (active/closed based on applicationEndDate), and handles job card click to show details modal"
+        },
+        {
+          "path": "frontend/src/components/jobs/JobCard.tsx",
+          "operation": "create",
+          "description": "Create job card component displaying job title, organization name, post name, vacancy count, application deadline, location, and visual indicator for active vs closed status based on applicationEndDate compared to current date"
+        },
+        {
+          "path": "frontend/src/components/jobs/JobFilters.tsx",
+          "operation": "create",
+          "description": "Create job filters component with dropdown/select controls for filtering by qualification, location, organization, and deadline status with clear filters button"
+        },
+        {
+          "path": "frontend/src/components/jobs/JobDetailsModal.tsx",
+          "operation": "create",
+          "description": "Create job details modal component showing complete job information including all fields from JobListing type with link to official website and formatted dates"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for JobsPage component at path '/jobs'"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create Results section page with searchable list and filtering by organization and date",
+      "acceptanceCriteria": [
+        "Results are displayed in a clear, scannable format",
+        "Users can search and filter results",
+        "Result links are prominently displayed",
+        "Recent results appear at the top"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ResultsPage.tsx",
+          "operation": "create",
+          "description": "Create results page component that fetches exam results using getLatestExamResults backend function, displays results in list/table format sorted by resultDeclarationDate descending, implements search by exam name and filters for organization and date range"
+        },
+        {
+          "path": "frontend/src/components/results/ResultCard.tsx",
+          "operation": "create",
+          "description": "Create result card component displaying exam name, organization, result declaration date, roll number range, category info, and prominent result link button"
+        },
+        {
+          "path": "frontend/src/components/results/ResultFilters.tsx",
+          "operation": "create",
+          "description": "Create result filters component with search input for exam name, organization dropdown filter, and date range picker for filtering by result declaration date"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for ResultsPage component at path '/results'"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create Admit Cards section page with filters and highlighting for upcoming exams",
+      "acceptanceCriteria": [
+        "Admit cards are organized chronologically",
+        "Upcoming exams are highlighted with visual emphasis",
+        "Download links are clearly accessible",
+        "Important instructions are visible without clicking through"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AdmitCardsPage.tsx",
+          "operation": "create",
+          "description": "Create admit cards page component that fetches admit cards using getLatestAdmitCards backend function, displays admit cards sorted by examDate, highlights upcoming exams (examDate >= current date) with visual emphasis, and implements filters for exam date and organization"
+        },
+        {
+          "path": "frontend/src/components/admitcards/AdmitCardCard.tsx",
+          "operation": "create",
+          "description": "Create admit card component displaying exam name, organization, admit card release date, exam date, download link button, important instructions preview, and visual highlighting for upcoming exams"
+        },
+        {
+          "path": "frontend/src/components/admitcards/AdmitCardFilters.tsx",
+          "operation": "create",
+          "description": "Create admit card filters component with organization dropdown filter and exam date range picker"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for AdmitCardsPage component at path '/admit-cards'"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Create News section page with blog-style layout, category filters, and search",
+      "acceptanceCriteria": [
+        "News items display with headline, summary, and date",
+        "Users can filter news by category",
+        "Search allows finding specific news items",
+        "External links to full articles are provided"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/NewsPage.tsx",
+          "operation": "create",
+          "description": "Create news page component that fetches news updates using getLatestNewsUpdates backend function, displays news in blog-style card layout sorted by publicationDate descending, implements search by headline/summary and category filter"
+        },
+        {
+          "path": "frontend/src/components/news/NewsCard.tsx",
+          "operation": "create",
+          "description": "Create news card component displaying headline, summary, publication date, source, category badge, and link to external article"
+        },
+        {
+          "path": "frontend/src/components/news/NewsFilters.tsx",
+          "operation": "create",
+          "description": "Create news filters component with search input for headline/summary and category dropdown filter"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for NewsPage component at path '/news'"
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Create Schemes section page with detailed card format and filtering by ministry and eligibility",
+      "acceptanceCriteria": [
+        "Schemes display with name, ministry, and brief description",
+        "Users can filter schemes by ministry and eligibility criteria",
+        "Each scheme card shows key benefits and application process overview",
+        "Clicking a scheme reveals full details including official website link"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/SchemesPage.tsx",
+          "operation": "create",
+          "description": "Create schemes page component that fetches government schemes using getLatestGovernmentSchemes backend function, displays schemes in card grid layout, implements filters for ministry/department and eligibility criteria, and handles scheme card click to show details modal"
+        },
+        {
+          "path": "frontend/src/components/schemes/SchemeCard.tsx",
+          "operation": "create",
+          "description": "Create scheme card component displaying scheme name, ministry/department, brief description, key benefits summary, and application process overview"
+        },
+        {
+          "path": "frontend/src/components/schemes/SchemeFilters.tsx",
+          "operation": "create",
+          "description": "Create scheme filters component with ministry/department dropdown filter and eligibility criteria search/filter input"
+        },
+        {
+          "path": "frontend/src/components/schemes/SchemeDetailsModal.tsx",
+          "operation": "create",
+          "description": "Create scheme details modal component showing complete scheme information including all fields from GovernmentScheme type with link to official website and formatted launch date"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for SchemesPage component at path '/schemes'"
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Design portal with professional aesthetic using orange and teal color scheme, clean typography, generous whitespace, and accessibility-compliant contrast",
+      "acceptanceCriteria": [
+        "Orange and teal colors are consistently applied across all pages",
+        "Typography is readable and professional",
+        "Layout uses whitespace effectively for visual clarity",
+        "Design conveys trust and official authority",
+        "All text meets WCAG contrast requirements"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define CSS custom properties for vibrant orange and deep teal color scheme inspired by Indian government portals, establish professional sans-serif font stack, set base typography styles with generous line-height for readability, ensure all color combinations meet WCAG AA contrast requirements for accessibility"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom orange and teal color palette (primary, secondary, accent shades), add custom spacing utilities for generous whitespace, configure font family with modern sans-serif stack, add custom shadow utilities for subtle depth"
+        },
+        {
+          "path": "frontend/src/components/layout/Layout.tsx",
+          "operation": "create",
+          "description": "Create layout wrapper component that applies consistent spacing, background colors, and structure across all pages with proper padding and max-width constraints for optimal readability"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routes with Layout component to ensure consistent design application across the portal"
+        }
+      ]
+    }
+  ]
+}
